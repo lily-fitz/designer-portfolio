@@ -22,13 +22,13 @@
     <link rel="stylesheet" href="style.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="main.js" defer></script>
   </head>
 
   <body>
     <header>
+      <!-- style="position: fixed; top: 0; left: 0; right: 0" -->
+      <div class="logo">Lily Fitzmeyer</div>
       <div class="header-info">
-        <div class="logo">Lily Fitzmeyer</div>
         <p class="header-info__title">
           <span class="sr-only">Job Title:</span>Front-End Dev/Designer
         </p>
@@ -46,27 +46,24 @@
       </nav>
       <button class="sr-only">Mobile Menu</button>
     </header>
-    <main>
+    <main id="main">
       <!--------------------------------------------------->
       <section id="intro" class="intro full">
         <div class="intro-content">
           <h1 class="intro-content__heading">Welcome! I'm Lily</h1>
-          <ul class="intro-content__skills">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JAVASCRIPT</li>
-            <li>REACT</li>
-            <li>NODE</li>
-            <li>WORDPRESS</li>
-            <li>WCAG</li>
-          </ul>
         </div>
       </section>
       <!-- end section grid-intro -->
       <!--------------------------------------------------->
-      <section class="portfolio">
+      <section id="portfolio" class="portfolio">
+        <!-- style="position: fixed; bottom: 0; left: 0; right: 0" -->
         <div class="portfolio__title">
-          <svg viewBox="0 0 201 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            class="portfolio__arrow"
+            viewBox="0 0 201 150"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
@@ -75,10 +72,241 @@
             />
           </svg>
           <h2>Portfolio<span>Highlights</span></h2>
+          <svg
+            id="intro__svg-welcome"
+            viewBox="0 0 257 153"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.9582 78.8134C39.9687 63.0018 79.2091 31.1039 60.0865 30.0056C37.0435 28.1132 46.6697 85.6515 40.5005 114.602C37.073 130.687 25.6766 154.102 12.9565 149.836C-5.48286 143.651 4.78807 121.436 7.32748 118.188C11.4592 112.903 77.0798 81.7175 76.0067 79.4595M72.5003 124.86C79.3801 105.167 90.7665 65.9126 81.2732 66.4384C69.4065 67.0956 78.3979 120.95 99.7906 113.551M99.7906 113.551C121.183 106.152 118.139 12.3813 101.282 16.5171M99.7906 113.551C106.977 111.066 111.406 98.8343 113.48 83.8418M101.282 16.5171C98.1286 17.6468 96.3147 18.8779 96.0107 22.8975M101.282 16.5171C112.477 13.7706 117.58 54.2021 113.48 83.8418M96.0107 22.8975C95.6224 28.0307 116.171 110.749 128.239 100.031M96.0107 22.8975C95.7562 26.2619 104.219 62.3726 113.48 83.8418M128.239 100.031C123.271 102.392 118.348 95.1291 113.48 83.8418M128.239 100.031C133.917 95.6717 139.854 85.3146 141.928 70.3221M141.928 70.3221C146.028 40.6824 140.925 0.250804 129.731 2.99733C126.577 4.12705 124.763 5.35812 124.459 9.37776C124.204 12.7421 132.667 48.8529 141.928 70.3221ZM141.928 70.3221C146.796 81.6094 151.078 87.5163 156.043 85.1566C158.224 84.3048 158.984 83.5231 160.369 81.4399C161.754 79.3568 170.148 28.6301 166.58 28.1115C163.012 27.5928 178.786 88.7416 187.398 71.9163C196.01 55.0911 190.797 13.8349 190.966 16.5221C191.136 19.2094 218.406 142.987 211.395 146.872C204.384 150.758 176.242 148.632 174.93 124.897C173.618 101.163 261.375 63.332 247 55.2166C233.732 51.3728 209.773 42.3499 220.079 37.0096C232.96 30.3341 237.105 35.561 234.011 33.7099C230.917 31.8588 236.412 14.3002 240.342 19.0755C244.273 23.8508 256.032 50.9243 253.774 51.9974"
+              stroke="#c2c2c2"
+              stroke-width="4"
+              stroke-linecap="round"
+            />
+          </svg>
+          <ul class="intro-content__skills">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+            <li>REACT</li>
+            <li>WORDPRESS</li>
+            <li>WCAG</li>
+          </ul>
         </div>
       </section>
       <!--------------------------------------------------->
+      <section id="projects" class="projects">
+        <div>
+          <!--------------------------------------------------->
+          <div class="project">
+            <h3 class="project__title">Boston Childrens Museum (BCM)</h3>
+            <div class="project__role">
+              <h4>Role</h4>
+              <p>Developer</p>
+            </div>
+            <div class="project__tech">
+              <h4>Tech</h4>
+              <p>HTML, CSS, JS, Wordpress</p>
+            </div>
+            <h4 class="project__desc">Desc</h4>
+            <p>
+              Custom wordpress theme based on mockups/ wireframes from BCM graphic artist.
+              Transitioning client from Drupal to Wordpress. <br /><br />Worked with WGBH
+              and the National Center for Accessible Media (NCAM) to make the site fully
+              accessible.
+            </p>
+            <div class="project__img bcm">
+              <img src="./assets/imgs/projects/bcm.png" alt="" />
+            </div>
+          </div>
+          <!--------------------------------------------------->
+          <div class="project">
+            <h3 class="project__title">BCM Japanese House</h3>
+            <div class="project__role">
+              <h4>Role</h4>
+              <p>Developer</p>
+            </div>
+            <div class="project__tech">
+              <h4>Tech</h4>
+              <p>HTML, CSS, JS, Wordpress</p>
+            </div>
+            <h4 class="project__desc">Desc</h4>
+            <p>
+              Rebuilt the Boston Children's Museum's Japanese House website (no redesign).
+              Transitioned client from Drupal to Wordpress.
+            </p>
+            <div class="project__img jhouse">
+              <img src="./assets/imgs/projects/jhouse.png" alt="" />
+            </div>
+          </div>
+          <!--------------------------------------------------->
+          <div class="project">
+            <h3 class="project__title">The Best Blog</h3>
+            <div class="project__role">
+              <h4>Role</h4>
+              <p>Designer & Developer</p>
+            </div>
+            <div class="project__tech">
+              <h4>Tech</h4>
+              <p>HTML, CSS, JS, Wordpress</p>
+            </div>
+            <h4 class="project__desc">Desc</h4>
+            <p>A sample blog built with react and the Sanity.io CMS.</p>
+            <div class="project__img bestblog">
+              <img src="./assets/imgs/projects/bestblog.png" alt="" />
+            </div>
+          </div>
+          <!--------------------------------------------------->
+          <div class="project">
+            <h3 class="project__title">EE Crash</h3>
+            <div class="project__role">
+              <h4>Role</h4>
+              <p>Designer & Developer</p>
+            </div>
+            <div class="project__tech">
+              <h4>Tech</h4>
+              <p>HTML, CSS, JS, Wordpress</p>
+            </div>
+            <h4 class="project__desc">Desc</h4>
+            <p>
+              An auto-themed webpage demonstrating javascript methods, intersection
+              observer, advanced CSS functions, and basic SVG animation.
+            </p>
+            <div class="project__img eecrash">
+              <img src="./assets/imgs/projects/ee-crash.png" alt="" />
+            </div>
+          </div>
+          <!--------------------------------------------------->
+        </div>
+        <div>
+          <!--------------------------------------------------->
+          <div class="project">
+            <h3 class="project__title">CareMx</h3>
+            <div class="project__role">
+              <h4>Role</h4>
+              <p>Designer & Developer</p>
+            </div>
+            <div class="project__tech">
+              <h4>Tech</h4>
+              <p>HTML, CSS, JS, Wordpress</p>
+            </div>
+            <h4 class="project__desc">Desc</h4>
+            <p>One-page website for the upcoming telehealth startup.</p>
+            <div class="project__img caremx">
+              <img src="./assets/imgs/projects/caremx.png" alt="" />
+            </div>
+          </div>
+          <!--------------------------------------------------->
+          <div class="project">
+            <h3 class="project__title">Stephen's Portfolio</h3>
+            <div class="project__role">
+              <h4>Role</h4>
+              <p>Designer & Developer</p>
+            </div>
+            <div class="project__tech">
+              <h4>Tech</h4>
+              <p>HTML, CSS, JS, Wordpress</p>
+            </div>
+            <h4 class="project__desc">Desc</h4>
+            <p>Dynamic one-page website advertising electrical engineering lectures.</p>
+            <div class="project__img stevie">
+              <img src="./assets/imgs/projects/stevie.png" alt="" />
+            </div>
+          </div>
+          <!--------------------------------------------------->
+          <div class="project">
+            <h3 class="project__title">Auto Premier</h3>
+            <div class="project__role">
+              <h4>Role</h4>
+              <p>Designer & Developer</p>
+            </div>
+            <div class="project__tech">
+              <h4>Tech</h4>
+              <p>HTML, CSS, JS, Wordpress</p>
+            </div>
+            <h4 class="project__desc">Desc</h4>
+            <p>
+              An auto-themed webpage demonstrating javascript methods, intersection
+              observer, advanced CSS functions, and basic SVG animation.
+            </p>
+            <div class="project__img auto">
+              <img src="./assets/imgs/projects/auto.png" alt="" />
+            </div>
+          </div>
+          <!--------------------------------------------------->
+          <div class="project">
+            <h3 class="project__title">NFT</h3>
+            <div class="project__role">
+              <h4>Role</h4>
+              <p>Designer & Developer</p>
+            </div>
+            <div class="project__tech">
+              <h4>Tech</h4>
+              <p>HTML, CSS, JS, Wordpress</p>
+            </div>
+            <h4 class="project__desc">Desc</h4>
+            <p>
+              An auto-themed webpage demonstrating javascript methods, intersection
+              observer, advanced CSS functions, and basic SVG animation.
+            </p>
+            <div class="project__img nft">
+              <img src="./assets/imgs/projects/nft.png" alt="" />
+            </div>
+          </div>
+          <!--------------------------------------------------->
+        </div>
+        <!--------------------------------------------------->
+      </section>
+      <!--------------------------------------------------->
+      <!-- <section>
+        <svg
+          width="220px"
+          height="auto"
+          viewBox="0 0 7920 6498"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M453.199 3750.82C188.135 4139.94 646.822 4856.74 368.863 4667.4C90.9038 4478.05 310.888 4270.14 575.952 3881.02C841.016 3491.9 1050.79 3068.92 1328.74 3258.26C1606.7 3447.61 718.263 3361.7 453.199 3750.82Z"
+            fill="#FFB930"
+          />
+          <path
+            d="M7456.37 5497.83C7726.97 5077.35 7205.99 4320.04 7512.4 4517.23C7818.82 4714.42 7589.88 4940.51 7319.29 5360.99C7048.69 5781.48 6838.91 6237.12 6532.5 6039.93C6226.08 5842.75 7185.78 5918.32 7456.37 5497.83Z"
+            fill="#FFB930"
+          />
+          <path
+            d="M3052.77 4189.74C2938.19 3939 2742.12 3734.11 2495.45 3607.31C2248.78 3480.51 1965.5 3439.01 1690.22 3489.35C1414.94 3539.68 1163.29 3678.99 974.883 3885.34C786.477 4091.69 672.017 4353.37 649.522 4629.17C627.027 4904.97 697.775 5179.24 850.627 5408.79C1003.48 5638.35 1229.76 5810.15 1493.84 5897.16C1757.91 5984.17 2044.8 5981.44 2309.32 5889.4C2573.84 5797.36 2800.98 5621.24 2954.98 5388.76L1904.5 4714.5L3052.77 4189.74Z"
+            fill="#FFB930"
+          />
+          <path
+            d="M3052.77 4189.74C2938.19 3939 2742.12 3734.11 2495.45 3607.31C2248.78 3480.51 1965.5 3439.01 1690.22 3489.35C1414.94 3539.68 1163.29 3678.99 974.883 3885.34C786.477 4091.69 672.017 4353.37 649.522 4629.17C627.027 4904.97 697.775 5179.24 850.627 5408.79C1003.48 5638.35 1229.76 5810.15 1493.84 5897.16C1757.91 5984.17 2044.8 5981.44 2309.32 5889.4C358 4498 2800.98 5621.24 2954.98 5388.76L1904.5 4714.5L3052.77 4189.74Z"
+            fill="#FFB930"
+          />
+          <path
+            d="M3031.6 888.809C2839.89 1086.91 2720.56 1344.18 2692.41 1620.1C2664.26 1896.02 3045.32 2174.93 3192.54 2412.92C3339.76 2650.91 3419.08 2866.29 3679.91 2966.51C3940.74 3066.73 4051.83 3046.1 4316.85 2966.51C4581.88 2886.92 4727.28 2638.93 4885.32 2412.92C5043.36 2186.91 5205.06 1995.7 5189.82 1718.07C5174.57 1440.45 5067.45 1174.3 4885.32 961.531C4300.98 3285.79 4456.39 601.452 4183.77 542.794L3679.91 2205.34L3031.6 888.809Z"
+            fill="#FFB930"
+          />
+          <path
+            d="M7422.98 4391.74C7361.77 4121.58 7212.17 3880.9 6997.74 3707.6C6783.31 3534.29 6516.23 3438.19 6238.54 3434.43C5960.85 3430.68 5688.32 3519.48 5463.86 3686.85C5239.4 3854.22 5075.76 4090.67 4998.69 4358.95C4921.62 4627.24 4935.51 4912.14 5038.16 5168.8C5140.82 5425.45 5326.41 5639.29 5565.72 5776.65C5805.04 5914.01 6084.48 5967.08 6360.06 5927.51C6447.49 5695.15 7080.78 4606.04 7422.98 4391.74Z"
+            fill="#FFB930"
+          />
+          <path
+            d="M5075.44 4120.2C4931.69 3884.97 4712.52 3705 4452.46 3608.61C4192.39 3512.23 3906.18 3504.91 3638.9 3587.8C3371.62 3670.7 3138.43 3839.11 2976.06 4066.51C2813.68 4293.91 2731.34 4567.4 2741.99 4843.91C2752.65 5120.42 2855.69 5384.26 3034.9 5593.89C3214.11 5803.51 3459.31 5947.02 3731.9 6001.82C4004.49 6056.62 4288.98 6019.6 4540.6 5896.58C4792.21 5773.56 4996.66 5571.54 5121.75 5322.32L4552.51 5046.82C4490.79 5169.78 4389.93 5269.45 4265.79 5330.14C4141.65 5390.83 4001.29 5409.1 3866.8 5382.06C3732.31 5355.03 3611.34 5284.23 3522.92 5180.8C3434.5 5077.38 3383.67 4947.21 3378.41 4810.79C3373.15 4674.36 3413.78 4539.44 3493.89 4427.24C3574 4315.05 3689.05 4231.96 3820.92 4191.06C3952.79 4150.16 4093.99 4153.78 4222.3 4201.33C4350.61 4248.88 4458.74 4337.68 4529.66 4453.73L5075.44 4120.2Z"
+            fill="#FFB930"
+          />
+          <path
+            d="M2114.02 4099.98C2169.99 4207.84 2006.62 4231.37 1862.04 4306.39C1717.46 4381.41 1596.65 4505.34 1540.68 4397.48C1484.72 4289.62 1532.96 4052.47 1677.54 3977.45C1822.13 3902.43 2058.06 3992.12 2114.02 4099.98Z"
+            fill="white"
+          />
+          <path
+            d="M6700.81 4421.54C6796.79 4606.5 6741.94 5045 6489.98 5175.74C6238.03 5306.48 5797.65 5124.94 5701.68 4939.98C5605.7 4755.02 5692.19 4346.41 5944.15 4215.67C6196.11 4084.93 6604.84 4236.58 6700.81 4421.54Z"
+            fill="white"
+          />
+        </svg>
+      </section> -->
     </main>
+    <script src="./assets/js/main.js" defer></script>
   </body>
 </html>
 

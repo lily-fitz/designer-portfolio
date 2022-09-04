@@ -2,14 +2,14 @@
 
 $breakpoints-min: (
   'small': 40rem,
-  'medium': 60rem,
-  'large': 80rem,
+  'medium': 56rem,
+  'large': 64rem,
 );
 
 $breakpoints-max: (
   'small': 40.001rem,
-  'medium': 60.001rem,
-  'large': 80.001rem,
+  'medium': 56.001rem,
+  'large': 64.001rem,
 );
 
 @mixin mq-min($key) {

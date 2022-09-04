@@ -6,11 +6,11 @@ $ff: 'Kanit', sans-serif;
 
 $fs-intro: clamp(2.25rem, 8.5vw, 7rem);
 $fs-h1: clamp(2.25rem, 4.5vw, 3.375rem);
-$fs-h2: clamp(2rem, 2.75vw, 2.25rem);
-$fs-h3: clamp(1.25rem, 3vw, 2rem);
+$fs-h2: clamp(2.25rem, 3.75vw, 3rem);
+$fs-h3: clamp(1.25rem, 2.75vw, 2rem);
 $fs-h4: clamp(1.25rem, 2vw, 1.75rem);
 $fs-h5: clamp(1.25rem, 2.25vw, 1.5rem);
-$fs-h6: clamp(1.125rem, 2vw, 1.25rem);
+$fs-h6: clamp(1.125rem, 2vw, 1.125rem);
 $fs-nav: clamp(1rem, 1vw, 1.125rem);
 $fs-text: 15px;
 $fs-accent: 1.25em;
@@ -30,7 +30,6 @@ $font-weights: (
 h1 + p,
 h2 + p,
 h3 + p,
-h4 + p,
 h5 + p,
 h6 + p {
   margin-top: 14px;
