@@ -5,7 +5,7 @@ label {
   text-align: left;
 }
 
-input {
+input[type='text'] {
   border: solid 2px $clr-primary;
   border-radius: $br;
   padding: 0.5rem;
@@ -19,4 +19,12 @@ input + button {
 
 .input-button {
   display: flex;
+}
+
+.form button[type='submit'] {
+  background: $clr-primary;
+
+  &:hover {
+    background: #000;
+  }
 }

@@ -2,7 +2,7 @@
 //responsive grids
 //////////
 
-$gap: 3rem;
+@use '../abstracts/variables' as *;
 
 [class^='grid-'] {
   display: grid;

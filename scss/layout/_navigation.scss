@@ -6,13 +6,67 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  gap: $gap;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+
+  &__location {
+    position: relative;
+  }
+}
+
+.header-info__location::before {
+  position: absolute;
+  content: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 42.5L24.2 41.6C23.7 41.1 12 27.3 12 19C12 11.8 17.8 6 25 6C32.2 6 38 11.8 38 19C38 27.3 26.3 41.1 25.8 41.7L25 42.5ZM25 8C18.9 8 14 12.9 14 19C14 25.4 22.4 36.2 25 39.4C27.6 36.2 36 25.4 36 19C36 12.9 31.1 8 25 8Z' fill='black'/%3E%3Cpath d='M25 24C22.2 24 20 21.8 20 19C20 16.2 22.2 14 25 14C27.8 14 30 16.2 30 19C30 21.8 27.8 24 25 24ZM25 16C23.3 16 22 17.3 22 19C22 20.7 23.3 22 25 22C26.7 22 28 20.7 28 19C28 17.3 26.7 16 25 16Z' fill='black'/%3E%3C/svg%3E%0A");
+  top: 1px;
+  bottom: 0;
+  left: -20px;
+}
+
+.logo {
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: 2px;
+  padding-right: 3rem;
+  border-right: $border;
+}
+
+.header-info {
+  display: flex;
+  gap: $gap;
 }
 
 nav {
   ul {
     list-style: none;
     display: flex;
-    gap: 3rem;
+    gap: $gap;
+
+    li:first-of-type {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 22 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7.5H21M12.25 1L21 7.5L12.25 14' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        top: 1px;
+        bottom: 0;
+        right: -20px;
+      }
+    }
+
+    li:last-of-type {
+      border-bottom: $border-text;
+    }
 
     a {
       color: $clr-primary;

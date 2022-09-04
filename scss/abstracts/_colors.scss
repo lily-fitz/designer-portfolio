@@ -18,8 +18,11 @@
 // $bg: #2a2a2a;
 // $text: #fafafa;
 
-$bg: #fcfcfc;
+$clr-overlay: rgba(224, 220, 219, 0.4);
+
+$bg: linear-gradient($clr-overlay, $clr-overlay), url(../assets/imgs/layoutBG-img.png);
 $text: #0c0c0c;
-$clr-primary: rgb(63, 0, 250);
+$clr-primary: rgb(0, 0, 0);
+$clr-hover: rgb(156, 58, 255);
 $white: #fff;
 $black: #000;
