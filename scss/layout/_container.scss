@@ -9,7 +9,6 @@
 @mixin container {
   width: min(100% - 2rem, 78rem);
   margin-inline: auto;
-  transition: width 0.2s ease;
 
   @media (min-width: 40rem) {
     width: min(100% - 6rem, 78rem);
